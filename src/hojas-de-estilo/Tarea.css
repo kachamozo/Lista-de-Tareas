@@ -5,7 +5,7 @@
 	margin: 5px 0;
 	padding: 8px 15px 8px 20px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between;/*para que los elementos se distribuyan adecuadamente*/
 	align-items: center;
 	border-radius: 7px;
 	border: 1px solid white;
@@ -18,11 +18,17 @@
 	font-size: 20px;
 	display: flex;
 	align-items: center;
-	overflow-wrap: anywhere; /*permite cortar el texto cuando es muy largo y continua abajo por eso hicimos min-height 65 para que se a variable*/
+	overflow-wrap: anywhere; /*permite cortar el texto cuando es muy largo va ser cortado y continua abajo por eso hicimos min-height 65 para que se a variable y expandirse verticalmente*/
 }
 
 .tarea-icono {
 	width: 25px;
 	height: 25px;
 	margin: 5px;
+}
+
+/*Tarea completada*/
+.tarea-contenedor.completada {
+	background-color: #5a01a7;
+	text-decoration: line-through;
 }
