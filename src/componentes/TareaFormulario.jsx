@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../hojas-de-estilo/TareaFormulario.css';
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
 
 function TareaFormulario(props){
 
@@ -8,17 +8,21 @@ function TareaFormulario(props){
 
   const manejarCambio = (e) =>{
     setInput(e.target.value)
-  }
+  };
 
   const manejarEnvio = (e) =>{
      e.preventDefault(); //para que no se vuelve a cargar toda la aplicacion
+
      const tareaNueva = {
       id: uuidv4(),
       texto: input,
       completada: false,
-     }
-     props.onSubmit(tareaNueva)
-   }
+     };
+     //onsubmit es una funcion agregarTarea que llega como prop de listaDeTareas
+     props.onSubmit(tareaNueva);
+  };
+
+
   return (
     <form className="tarea-formulario" onSubmit={manejarEnvio} >
       <input
@@ -28,11 +32,11 @@ function TareaFormulario(props){
         name='texto'
         onChange={manejarCambio}
         />
-      <button className='tarea-boton'>
+      <button className='tarea-boton' >
         Agregar Tarea
       </button>
     </form>
-  )
-};
+  );
+}
 
 export default TareaFormulario;

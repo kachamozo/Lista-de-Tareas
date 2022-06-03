@@ -1,6 +1,6 @@
 import "./App.css";
 import freeCodeCampLogo from "./imagenes/freecodecamp-logo.png";
-import ListaDeTareas from './componentes/ListaDeTareas.jsx'
+import ListaDeTareas from './componentes/ListaDeTareas.jsx';
 
 function App() {
   return (
